@@ -1,0 +1,46 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/aaSpFileUnlock/AaSpFileUnlockWebPart.js",
+      "manifest": "./src/webparts/aaSpFileUnlock/AaSpFileUnlockWebPart.manifest.json",
+      "outputPath": "./dist/aa-sp-file-unlock.bundle.js"
+    }
+  ],
+  "externals": {
+    "@microsoft/sp-client-base": "node_modules/@microsoft/sp-client-base/dist/sp-client-base.js",
+    "@microsoft/sp-client-preview": "node_modules/@microsoft/sp-client-preview/dist/sp-client-preview.js",
+    "@microsoft/sp-lodash-subset": "node_modules/@microsoft/sp-lodash-subset/dist/sp-lodash-subset.js",
+    "office-ui-fabric-react": "node_modules/office-ui-fabric-react/dist/office-ui-fabric-react.js",
+    "react": "node_modules/react/dist/react.min.js",
+    "react-dom": "node_modules/react-dom/dist/react-dom.min.js",
+    "react-dom/server": "node_modules/react-dom/dist/react-dom-server.min.js",
+    "sp-init": {
+      "path": "https://static.sharepoint.com/_layouts/15/init.js",
+      "globalName": "$_global_init"
+    },
+    "microsoft-ajax": {
+      "path": "https://static.sharepoint.com/_layouts/15/MicrosoftAjax.js",
+      "globalName": "Sys",
+      "globalDependencies": [
+        "sp-init"
+      ]
+    },
+    "sp-runtime": {
+      "path": "https://static.sharepoint.com/_layouts/15/SP.Runtime.js",
+      "globalName": "SP",
+      "globalDependencies": [
+        "microsoft-ajax"
+      ]
+    },
+    "sharepoint": {
+      "path": "https://static.sharepoint.com/_layouts/15/SP.js",
+      "globalName": "SP",
+      "globalDependencies": [
+        "sp-runtime"
+      ]
+    }
+  },
+  "localizedResources": {
+    "mystrings": "webparts/aaSpFileUnlock/loc/{locale}.js"
+  }
+}

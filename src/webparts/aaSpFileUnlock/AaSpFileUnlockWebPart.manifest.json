@@ -1,0 +1,19 @@
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "e654e446-0622-4a3f-8361-6961ec7278dc",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+
+  "preconfiguredEntries": [{
+    "groupId": "e654e446-0622-4a3f-8361-6961ec7278dc",
+    "group": { "default": "Under Development" },
+    "title": { "default": "AaSpFileUnlock" },
+    "description": { "default": "Unlocks office files locked by Mocrosoft Office client Application(s) - Word, Excel etc." },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "AaSpFileUnlock"
+    }
+  }]
+}

@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "name": "aa-sp-un-client-side-solution",
+    "id": "3566f1c5-9946-481f-b733-5197d0d9d701",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "aa-sp-un.spapp"
+  }
+}
