@@ -1,0 +1,32 @@
+ #http://qiita.com/ya_asuka/items/33d5a3f08eb1916b1044
+ #
+
+ FROM microsoft/windowsservercore
+
+ ENV NPM_CONFIG_LOGLEVEL info
+ ENV NODE_VERSION 6.10.3
+
+ RUN powershell -Command \
+     Wget -Uri https://nodejs.org/dist/v%NODE_VERSION%/node-v%NODE_VERSION%- x64.msi -OutFile node.msi -UseBasicParsing ; \
+     Start-Process -FilePath msiexec -ArgumentList / q, / i, node.msi -Wait ; \
+     Remove-Item -Path node.msi
+
+ RUN npm install - g npm
+ RUN npm install - g yo gulp
+ RUN npm install - g @ microsoft / generator - sharepoint @latest
+
+ RUN Docker run - name = spfx node: %NODE_VERSION% - spfx
+ RUN Docker cp "spfx: C: \ Program Files \ nodejs" nodejs
+ RUN Docker cp "spfx: C: \ Users \ ContainerAdministrator \ AppData \ Roaming \ npm" npm
+ RUN Docker stop spfx
+
+ FROM microsoft/nanoserver
+
+ #-COPY nodejs / windows / system32 /
+ COPY ["nodejs", "/ Program Files / nodejs /"]
+ #-COPY npm / Users / ContainerAdministrator / AppData / Roaming /
+ COPY ["npm", "/ Users / ContainerAdministrator / AppData / Roaming / npm /"]
+
+ RUN setx PATH "% PATH%; C: \ Program Files \ nodejs \; C: \ Users \ ContainerAdministrator \ AppData \ Roaming \ npm"
+
+#docker build -t spfx .
