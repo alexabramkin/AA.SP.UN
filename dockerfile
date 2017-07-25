@@ -20,10 +20,11 @@ RUN useradd --create-home --shell /bin/bash spfx && \
 
 USER spfx
 
-RUN npm install  & npm cache clean
+RUN npm install & npm cache clean
 #& rd /s /q %APPDATA%\npm-cache & for /d %G in ("%TEMP%\npm-*") do rd /s /q "%~G"
 
 CMD /bin/bash
 
 #docker build -t spfx:AA.SP.UN . --build-arg proj_name="AA.SP.UN"
 #docker run -h spfx -it --rm --name spfx-helloworld -v $%cd%:/usr/app/spfx -p 5432:5432 -p 4321:4321 -p 35729:35729 spfx
+#

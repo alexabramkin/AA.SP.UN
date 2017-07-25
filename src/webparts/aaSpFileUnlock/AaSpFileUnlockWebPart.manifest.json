@@ -9,11 +9,11 @@
   "preconfiguredEntries": [{
     "groupId": "e654e446-0622-4a3f-8361-6961ec7278dc",
     "group": { "default": "Under Development" },
-    "title": { "default": "AaSpFileUnlock" },
+    "title": { "default": "File Unlock" },
     "description": { "default": "Unlocks office files locked by Mocrosoft Office client Application(s) - Word, Excel etc." },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "AaSpFileUnlock"
+      "description": "File Unlock"
     }
   }]
 }

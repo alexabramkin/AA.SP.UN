@@ -13,32 +13,7 @@
     "office-ui-fabric-react": "node_modules/office-ui-fabric-react/dist/office-ui-fabric-react.js",
     "react": "node_modules/react/dist/react.min.js",
     "react-dom": "node_modules/react-dom/dist/react-dom.min.js",
-    "react-dom/server": "node_modules/react-dom/dist/react-dom-server.min.js",
-    "sp-init": {
-      "path": "https://static.sharepoint.com/_layouts/15/init.js",
-      "globalName": "$_global_init"
-    },
-    "microsoft-ajax": {
-      "path": "https://static.sharepoint.com/_layouts/15/MicrosoftAjax.js",
-      "globalName": "Sys",
-      "globalDependencies": [
-        "sp-init"
-      ]
-    },
-    "sp-runtime": {
-      "path": "https://static.sharepoint.com/_layouts/15/SP.Runtime.js",
-      "globalName": "SP",
-      "globalDependencies": [
-        "microsoft-ajax"
-      ]
-    },
-    "sharepoint": {
-      "path": "https://static.sharepoint.com/_layouts/15/SP.js",
-      "globalName": "SP",
-      "globalDependencies": [
-        "sp-runtime"
-      ]
-    }
+    "react-dom/server": "node_modules/react-dom/dist/react-dom-server.min.js"
   },
   "localizedResources": {
     "mystrings": "webparts/aaSpFileUnlock/loc/{locale}.js"

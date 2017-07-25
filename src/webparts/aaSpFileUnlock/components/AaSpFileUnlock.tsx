@@ -4,13 +4,9 @@ import { css } from 'office-ui-fabric-react';
 import styles from '../AaSpFileUnlock.module.scss';
 import { IAaSpFileUnlockWebPartProps } from '../IAaSpFileUnlockWebPartProps';
 
-require('sp-init');
-require('microsoft-ajax');
-require('sp-runtime');
-require('sharepoint');
-
 export interface IAaSpFileUnlockProps extends IAaSpFileUnlockWebPartProps {
 }
+
 
 export default class AaSpFileUnlock extends React.Component<IAaSpFileUnlockProps, {}> {
   public render(): JSX.Element {
